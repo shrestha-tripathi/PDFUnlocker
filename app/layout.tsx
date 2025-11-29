@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next';
 import './globals.css';
-import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration';
+// TODO: Re-enable PWA features in the future
+// import ServiceWorkerRegistration from '@/components/ServiceWorkerRegistration';
 import { ThemeProvider } from '@/lib/hooks/useTheme';
 
 export const metadata: Metadata = {
@@ -61,7 +62,8 @@ export default function RootLayout({
       </head>
       <body className="antialiased bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 transition-colors">
         <ThemeProvider>
-          <ServiceWorkerRegistration />
+          {/* TODO: Re-enable PWA features in the future */}
+          {/* <ServiceWorkerRegistration /> */}
           {children}
         </ThemeProvider>
       </body>
