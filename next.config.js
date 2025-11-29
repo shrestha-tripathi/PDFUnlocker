@@ -3,8 +3,10 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   // Set basePath for GitHub Pages deployment (reads from env var during build)
-  basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
-  assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  // basePath: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  // assetPrefix: process.env.NEXT_PUBLIC_BASE_PATH || '',
+  basePath: '',
+  assetPrefix: '',
   images: {
     unoptimized: true,
   },
@@ -28,3 +30,4 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
