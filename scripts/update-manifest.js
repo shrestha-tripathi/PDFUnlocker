@@ -6,7 +6,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const basePath = process.env.NEXT_PUBLIC_BASE_PATH || '';
+const basePath = '';
 const outDir = path.join(__dirname, '..', 'out');
 
 console.log(`Updating manifest and service worker with basePath: "${basePath}"`);
