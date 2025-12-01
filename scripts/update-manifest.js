@@ -58,22 +58,20 @@ const swPath = path.join(outDir, 'sw.js');
 if (fs.existsSync(swPath)) {
   let swContent = fs.readFileSync(swPath, 'utf-8');
   
-  // Update STATIC_ASSETS paths
+  // Update PRECACHE_ASSETS paths
   swContent = swContent.replace(
-    /const STATIC_ASSETS = \[([\s\S]*?)\];/,
-    `const STATIC_ASSETS = [
+    /const PRECACHE_ASSETS = \[([\s\S]*?)\];/,
+    `const PRECACHE_ASSETS = [
   '${basePath}/',
-  '${basePath}/index.html',
   '${basePath}/manifest.json',
-  '${basePath}/icons/icon-192x192.png',
-  '${basePath}/icons/icon-512x512.png',
+  '${basePath}/icons/icon.svg',
 ];`
   );
   
-  // Update the fallback route
+  // Update the fallback route for navigation
   swContent = swContent.replace(
-    /return cached \|\| caches\.match\('\/'\);/,
-    `return cached || caches.match('${basePath}/');`
+    /const indexResponse = await caches\.match\('\/'\);/,
+    `const indexResponse = await caches.match('${basePath}/');`
   );
   
   fs.writeFileSync(swPath, swContent);

@@ -41,7 +41,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <link rel="apple-touch-icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/icons/apple-touch-icon.png`} />
+        <link rel="icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/icons/icon.svg`} type="image/svg+xml" />
+        <link rel="apple-touch-icon" href={`${process.env.NEXT_PUBLIC_BASE_PATH || ''}/icons/icon.svg`} />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
         <script
