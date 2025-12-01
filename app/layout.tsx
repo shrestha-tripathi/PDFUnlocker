@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description: 'Remove passwords from PDF files instantly. 100% free, works offline, your files never leave your device.',
   keywords: ['PDF', 'password remover', 'unlock PDF', 'decrypt PDF', 'free', 'privacy'],
   authors: [{ name: 'PDF Password Remover' }],
-  manifest: `${process.env.NEXT_PUBLIC_BASE_PATH || ''}/manifest.json`,
+  manifest: `/manifest.json`,
   appleWebApp: {
     capable: true,
     statusBarStyle: 'default',
